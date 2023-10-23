@@ -1,6 +1,7 @@
 version: '3.6'
 services:
     iris:
+        container_name: iris
         build:
             context: ./iris
             dockerfile: Dockerfile
@@ -21,6 +22,7 @@ services:
 
 
     atlas:
+        container_name: atlas
         build:
             context: ./atlas
             dockerfile: Dockerfile
@@ -41,6 +43,7 @@ services:
             
           
     webapi:
+        container_name: webapi
         build:
             context: ./webapi
             dockerfile: Dockerfile
@@ -58,7 +61,7 @@ services:
           - psql-pgql
           
     postgresql:
-        container_name: psql
+        container_name: postgresql
         restart: always
         image: psql
         build:

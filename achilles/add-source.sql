@@ -1,5 +1,5 @@
 INSERT INTO webapi.source (source_id, source_name, source_key, source_connection, source_dialect)
-SELECT nextval('webapi.source_sequence'), 'Cdm', 'CDM', ' jdbc:IRIS://localhost:1972/IRISAPP?user={user}&password={password}', 'sql server';
+SELECT nextval('webapi.source_sequence'), 'Cdm', 'CDM', ' jdbc:IRIS://iris:1972/IRISAPP?user={user}&password={password}', 'sql server';
 
 INSERT INTO webapi.source_daimon (source_daimon_id, source_id, daimon_type, table_qualifier, priority)
 SELECT nextval('webapi.source_daimon_sequence'), source_id, 0, 'SQLUser', 0

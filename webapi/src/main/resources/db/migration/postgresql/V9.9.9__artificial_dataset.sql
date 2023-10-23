@@ -5,7 +5,7 @@ DELETE FROM webapi.source
 ;
 
 INSERT INTO webapi.source (source_id, source_name, source_key, source_connection, source_dialect, username, password, krb_auth_method)
-SELECT nextval('webapi.source_sequence'), 'Cdm', 'CDM', ' jdbc:IRIS://192.168.1.8:1972/IRISAPP?user={user}&password={password}', 'sql server', '_SYSTEM', 'SYS', 'PASSWORD'
+SELECT nextval('webapi.source_sequence'), 'Cdm', 'CDM', ' jdbc:IRIS://iris:1972/IRISAPP?user={user}&password={password}', 'sql server', '_SYSTEM', 'SYS', 'PASSWORD'
 ;
 
 INSERT INTO webapi.source_daimon (source_daimon_id, source_id, daimon_type, table_qualifier, priority)
